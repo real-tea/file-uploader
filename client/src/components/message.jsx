@@ -1,0 +1,23 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+
+const Message = ({ msg }) => {
+    return (
+        <div className = "alert alert-info alert-dismissible fade-show" role = "alert">
+            {msg}
+            <button
+            className = " close "
+            type = "button"
+            data-dismiss = "alert"/>
+            <span aria-hidden = "true">&times;</span>
+            
+        </div>
+    )
+}
+
+Message.PropTypes = {
+    msg : PropTypes.string.isRequired
+}
+
+export default Message;
